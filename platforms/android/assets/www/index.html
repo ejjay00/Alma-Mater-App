@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GGC Alma Mater</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <!-- Load the jQuery Mobile CSS file -->
+    <link rel="stylesheet" href="jquery.mobile-1.3.2.min.css" />
+    <!-- Then the jQuery support files -->
+    <script type="text/javascript" charset="utf-8" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.3.2.min.js"></script>
+    <!-- Load the application's main JavaScript file -->
+    <script type="text/javascript" charset="utf-8" src="index.js"></script>
+    <!-- Load the cordova JavaScript file -->
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!-- Apply some styling to center the buttons -->
+    <link rel="stylesheet" type="text/css" href="css/index.css"> </head>
+
+<body>
+    <section id="main" data-role="page">
+        <h1>GGC Alma Mater</h1>
+        <label>
+            <h3 align="center">Select the soundtrack:</h3>
+            <br>
+            <div>
+                <select id="song" style="width: 100%;" onchange="lyricSync()">
+                    <option value="Alma Mater Piano.mp3">Instrumental</option>
+                    <option value="Alma Mater Complete Low.mp3">Low Vocals</option>
+                    <option value="Alma Mater Complete High.mp3">High Vocals</option>
+                    <option value="Alma Mater Melody.mp3">Vocals Only</option>
+                </select>
+            </div>
+        </label>
+        <hr />
+        <div class="centered">
+            <div data-role="controlgroup" data-type="horizontal"> <a onclick="doPlay();" id="btnPlay" data-role="button" data-icon="arrow-r">Play</a> <a onclick="doPause();" id="btnPause" data-role="button" data-icon="grid">Pause</a> <a onclick="doStop();" id="btnStop" data-role="button" data-icon="delete">Stop</a> </div>
+        </div>
+        <div class="progress-bar">
+            <input type="range" id="progress-bar" style="background-color:#00704a;" stvalue="0" min="0" max="100" data-highlight="true" data-mini="true" /> </div>
+        <h3>Lyrics:</h3>
+        <p id="prev">-</p>
+        <p id="lyric">-</p>
+        <p id="next">-</p>
+        <hr />
+        <p><strong>Position: </strong><span id="filePos">Unknown</span>/<span id="fileLen">Unknown</span></p>
+        <hr />
+        <br>
+        <br>
+        <div align="center">
+            <p><a href="#about" style="#00704a" class="button">About</a></p>
+        </div>
+    </section>
+    <!-- My About Page goes below -->
+    <section id="about" data-role="page" style="background-color: #cccccc">
+            <h1 style="background-color: #00704a; color:white">About</h1>
+        <div data-role="main" class="ui-content" align="center">
+            <p><font size="4"><strong>An app that teaches the GGC Alma Mater with various music files to follow along to as well as an instrumental version to practice with.</strong></font></p> <img src="img/i_need_healing.jpg" alt="My Sis and I" style="width:85%;">
+            <p><font size="3"><strong>Eric Jenkins Summer 2017</strong></font></p>
+            <hr /> </div>
+    </section>
+</body>
+
+</html>
